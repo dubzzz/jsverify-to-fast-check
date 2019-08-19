@@ -19,13 +19,34 @@
   },
   "homepage": "https://github.com/dubzzz/jsverify-to-fast-check#readme",
   "devDependencies": {
+    "@types/jest": "^24.0.17",
+    "babel-jest": "^24.9.0",
     "fast-check": "^1.16.0",
     "jest": "^24.9.0",
     "jsverify": "^0.8.4",
+    "pure-rand": "^1.6.2",
+    "ts-jest": "^24.0.2",
     "typescript": "^3.5.3"
   },
   "peerDependencies": {
     "fast-check": "*",
     "jsverify": "^0.8.4"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.json"
+      }
+    },
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testMatch": [
+      "**/test/*.+(ts|js)"
+    ]
   }
 }
