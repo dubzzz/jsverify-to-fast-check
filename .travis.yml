@@ -1,9 +1,17 @@
 language: node_js
-node_js: "12"
-
+node_js: '12'
 cache:
   directories:
-    - node_modules
-
+  - node_modules
 script:
-  - npm run test
+- npm run build
+- npm run test
+deploy:
+  provider: npm
+  email: npm@dubien.org
+  skip_cleanup: true
+  api_key:
+    secure: VBkxHK7v7jdRhAGG2hnG4arduZdCo7idguy4z4n9G++h866ihzjRoEkt+2rMD8235ZN5TuH8+mkM8P2QdgP/hgIRYTQ98U6TzUnzZTy3jRndtIqYy49S5RBfISjn1jnXVZH2g5nFuFrYL3m7KE8DYB9K3EVXSRs4h0eaPRw+koV5fCLbxCS9OSejj6uAUGfFIE6yIvmL/dl+/8+KgzVpXW9WcOyM33eY3d1GlyKdnRtu99eOTAlfiAfdD9MALpo9xCa8ugzDxT+cILnUDtNa77JME1wwtuSG7Aty32RLb9dQa/yJT879mNpyPgWY8o8WkgXYa8hzGlVqAqmD6N7e65jsuWYv7jBSbQcvJLPt932zvA5AEUlZycfhbZnlMweae+0SFX4WNWBk/a7Gv5hmx1U9+QZbPYUqQVQHk/oAv4NKEV0pv2dBcUunZFrkfvP3hZ/FX9pBOBQO7Gotx9H2vw7o344VbwyOUdM4T27f5oWqJJIj2ItGe+HS53lsEvSX7ehInhRW2JLBN1XBzVhHiIpp4pywGpst7qCL7RjALoJ1E4oiUFzGpW0/+cJAQsJZfyAR1mMKHfxD3FvbAvSWhO3QCpbMj9OHhQCJTngELE5ktR9WVWFWVY/rOCHtBjFf7VmNuulFKL/lPoUEGGR5ZHzuUQXdNo0MRwFwcuZwapg=
+  on:
+    tags: true
+    repo: dubzzz/jsverify-to-fast-check
