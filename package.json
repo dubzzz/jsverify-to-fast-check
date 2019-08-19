@@ -1,0 +1,31 @@
+{
+  "name": "jsverify-to-fast-check",
+  "version": "0.0.0",
+  "description": "Set of tools and helpers to help JSVerify users to migrate to fast-check",
+  "main": "lib/jsverify-to-fast-check.js",
+  "types": "lib/jsverify-to-fast-check.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dubzzz/jsverify-to-fast-check.git"
+  },
+  "author": "Nicolas DUBIEN <github@dubien.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dubzzz/jsverify-to-fast-check/issues"
+  },
+  "homepage": "https://github.com/dubzzz/jsverify-to-fast-check#readme",
+  "devDependencies": {
+    "fast-check": "^1.16.0",
+    "jest": "^24.9.0",
+    "jsverify": "^0.8.4",
+    "typescript": "^3.5.3"
+  },
+  "peerDependencies": {
+    "fast-check": "*",
+    "jsverify": "^0.8.4"
+  }
+}
