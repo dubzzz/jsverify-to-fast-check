@@ -1,6 +1,6 @@
 {
   "name": "jsverify-to-fast-check",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Set of tools and helpers to help JSVerify users to migrate to fast-check",
   "main": "lib/jsverify-to-fast-check.js",
   "types": "lib/jsverify-to-fast-check.d.ts",
