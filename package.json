@@ -32,6 +32,12 @@
     "fast-check": "*",
     "jsverify": "^0.8.4"
   },
+  "keywords": [
+    "jsverify",
+    "fast-check",
+    "migration",
+    "property-based-testing"
+  ],
   "jest": {
     "moduleFileExtensions": [
       "ts",
