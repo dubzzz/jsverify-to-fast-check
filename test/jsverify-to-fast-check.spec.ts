@@ -8,11 +8,23 @@ test("[e2e] should produce a valid and stable arbitrary for fast-check", () => {
   const jscArbitrary = jsc.asciinestring;
   const fcArbitrary = jsc2fc(jscArbitrary);
   const fcParams = { seed: 42, numRuns: 3 };
-  const expectedValues = ["V", "_.)y(", "`Z%#"];
+  const expectedValues = fc.sample(fcArbitrary, fcParams);
 
   // Act / Assert.
   expect(fc.sample(fcArbitrary, fcParams)).toEqual(expectedValues);
-  expect(fc.sample(fcArbitrary, fcParams)).toEqual(expectedValues);
+});
+
+test("[e2e] should produce different values given different seeds", () => {
+  // Arrange.
+  const jscArbitrary = jsc.asciinestring;
+  const fcArbitrary = jsc2fc(jscArbitrary);
+  const numRuns = 20;
+  const expectedValues = fc.sample(fcArbitrary, { seed: 42, numRuns });
+
+  // Act / Assert.
+  expect(fc.sample(fcArbitrary, { seed: 43, numRuns })).not.toEqual(
+    expectedValues
+  );
 });
 
 test("[e2e] should preserve shrinking capabilities", () => {

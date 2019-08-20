@@ -51,6 +51,9 @@ const fcArbitrary = jsc2fc(jscArbitrary);
 
 ## Compatibility
 
-Supports any version of `fast-check`.
+Supports at least:
 
-Supports at least the version `jsverify@0.8.4`.
+- `fast-check` >= `1.0.0`
+- `jsverify` >= `0.8.0`
+
+_Older versions may worked but are not officially supported. Automated CI of this repository makes sure it works with the minimal versions stated above._

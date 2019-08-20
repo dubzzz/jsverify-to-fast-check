@@ -29,8 +29,8 @@
     "typescript": "^3.5.3"
   },
   "peerDependencies": {
-    "fast-check": "*",
-    "jsverify": "^0.8.4"
+    "fast-check": ">=1.0.0",
+    "jsverify": ">=0.8.0"
   },
   "keywords": [
     "jsverify",

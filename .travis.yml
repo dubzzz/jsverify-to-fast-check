@@ -1,11 +1,18 @@
 language: node_js
-node_js: '12'
+node_js: "12"
 cache:
   directories:
-  - node_modules
+    - node_modules
 script:
-- npm run build
-- npm run test
+  - npm run build
+  - cat ./node_modules/fast-check/package.json | grep "\"version\":"
+  - cat ./node_modules/jsverify/package.json | grep "\"version\":"
+  - npm run test
+  - npm install fast-check@1.0.0
+  - npm install jsverify@0.8.0
+  - cat ./node_modules/fast-check/package.json | grep "\"version\":"
+  - cat ./node_modules/jsverify/package.json | grep "\"version\":"
+  - npm run test
 deploy:
   provider: npm
   email: npm@dubien.org
